@@ -1,0 +1,139 @@
+/* Reset default styles and set font */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #77155b, #08555f);
+    padding: 10px;
+}
+
+/* To-do app styling */
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+/* Heading styling */
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #002765;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Row styling for input and button */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #45ff7a;
+    padding: 16px 50px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 40px;
+}
+
+/* Task list container styling */
+#tasks {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#list-container {
+    margin-top: 16px;
+}
+
+/* List item styling */
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Unchecked and checked item styling */
+ul li::before {
+    position: absolute;
+    content: '';
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('/imgs/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('/imgs/checked.png');
+}
+
+/* Span elements for edit and delete icons */
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span.delete {
+    right: 0;
+}
+
+ul li span.edit {
+    right: 40px;
+}
+
+/* Hover effects for delete and edit icons */
+ul li span.delete:hover,
+ul li span.edit:hover {
+    background-color: #edeef0;
+}
